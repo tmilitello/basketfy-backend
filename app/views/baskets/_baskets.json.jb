@@ -1,0 +1,17 @@
+
+
+{
+  user_id: basket.user_id,
+  name: basket.name,
+  created_at: basket.created_at,
+  updated_at: basket.updated_at,
+  asset_baskets: basket.asset_baskets.map do |asset_basket|
+     {
+      id: asset_basket.basket_id,
+      asset_id: asset_basket.asset_id,
+      weight: asset_basket.weight,
+      status: asset_basket.status
+    }
+  end,
+}
+

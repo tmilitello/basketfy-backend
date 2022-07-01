@@ -1,0 +1,1 @@
+render partial: "baskets/baskets", collection: @baskets, as: :basket

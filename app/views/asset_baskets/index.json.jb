@@ -1,0 +1,1 @@
+render partial: "asset_baskets/asset_baskets", collection: @asset_baskets, as: :asset_baskets

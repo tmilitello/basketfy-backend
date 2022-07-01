@@ -1,0 +1,11 @@
+
+{
+  name: assets.name,
+  price: assets.price,
+  created_at: assets.created_at,
+  updated_at: assets.updated_at
+
+}
+
+
+

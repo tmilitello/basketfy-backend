@@ -1,0 +1,30 @@
+
+{
+  basket_id: asset_baskets.basket_id,
+  asset_id: asset_baskets.asset_id,
+  weight: asset_baskets.weight,
+  status: asset_baskets.status,
+  created_at: asset_baskets.created_at,
+  updated_at: asset_baskets.updated_at,
+  # assets: asset_baskets.assets.map do |asset|
+  #   {
+  #     name: asset.name,
+  #     price: asset.price,
+  #     created_at: asset.created_at,
+  #     updated_at: asset.updated_at
+  #   }
+  # end,
+#   asset_tags: asset_baskets.asset_tags.map do |asset_tag|
+#     {
+#      asset_id: asset_tag.asset_id,
+#      price: asset_tag.tag_id,
+#      created_at: asset_tag.created_at,
+#      updated_at: asset_tag.updated_at
+#    }
+#  end
+}
+
+
+
+
+
