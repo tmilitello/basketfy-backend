@@ -1,2 +1,2 @@
-render partial: "assets/assets", collection: @assets, as: :assets
+render partial: "assets/assets", collection: @assets, as: :asset
 

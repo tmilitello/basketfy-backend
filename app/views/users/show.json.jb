@@ -1,0 +1,25 @@
+
+
+{
+  id: @user.id,
+  first_name: @user.first_name,
+  last_name: @user.last_name,
+  email: @user.email,
+  username: @user.username,
+  age: @user.age,
+  # carted_products: @order.carted_products.map do |carted_product|
+  #   render "carted_products/carted_products", carted_product: carted_product
+  # end,
+  created_at: @user.created_at,
+  updated_at: @user.updated_at,
+}
+
+
+# create_table "users", force: :cascade do |t|
+#   t.string "first_name"
+#   t.string "last_name"
+#   t.string "email"
+#   t.string "password_digest"
+#   t.string "username"
+#   t.integer "age"
+# end

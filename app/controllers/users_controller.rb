@@ -19,5 +19,22 @@ class UsersController < ApplicationController
   end
 
 
+  def show
+    @user = current_user
+    if @user.save
+      render template: "users/show"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
+    end
+  end
+
+  def destroy
+    @user = current_user
+    @.status = "removed"
+    carted_product.save
+    render json: {message: "Carted Product has been successfully removed."}
+  end
+
+
 
 end

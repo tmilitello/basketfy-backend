@@ -8,8 +8,8 @@ Tag.create!(name: 'stock')
 Tag.create!(name: 'woke')
 Tag.create!(name: 'conservative')
 
-user1= User.create!(first_name: 'Thomas', last_name: 'Militello', email: 'test1@gmail.com', password: "passord", username: 'Thomas_Militello', age: 29)
-user2 = User.create!(first_name: 'Joey ', last_name: 'Harbert', email: 'test2@gmail.com', password: "password" , username: 'Joey_Harbert', age: 29)
+user1= User.create!(first_name: 'Thomas', last_name: 'Militello', email: 'test1@gmail.com', password: "passord", username: 'Thomas_Militello', age: 29, status: "active")
+user2 = User.create!(first_name: 'Joey ', last_name: 'Harbert', email: 'test2@gmail.com', password: "password" , username: 'Joey_Harbert', age: 29, status: "active")
 
 Basket.create!(user_id: user1.id, name: 'Thomas\'s First Basket')
 Basket.create!(user_id: user1.id, name: 'Conservative Test Basket')
