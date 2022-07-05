@@ -5,6 +5,7 @@
   name: basket.name,
   created_at: basket.created_at,
   updated_at: basket.updated_at,
+  status: basket.status,
   asset_baskets: basket.asset_baskets.map do |asset_basket|
      {
       id: asset_basket.basket_id,

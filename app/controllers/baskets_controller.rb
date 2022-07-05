@@ -15,6 +15,39 @@ class BasketsController < ApplicationController
       render template: "baskets/index"
   end
 
+
+  def show
+    @basket = Basket.find_by(id: params[:id])
+    if @basket.save
+      render template: "baskets/show"
+    else
+      render json: { errors: @basket.errors.full_messages }, status: :bad_request
+    end
+  end
+
+  def update
+    @basket = Basket.find_by(id: params[:id])
+
+    @basket.name = params["name"] || @basket.name
+    @basket.status = params["status"] || @basket.status
+
+  
+
+    if @basket.save
+      @basket.save
+      render json: {message: "Updated basket!"}, updated_basket: @basket
+    else 
+      render json: {errors: @basket.errors.full_messages}, status: :unprocessable_entity
+    end
+
+  end
+
+  def destroy
+    @basket = Basket.find_by(id: params[:id])
+    @basket.status = "deactivated"
+    @basket.save
+    render json: {message: "Basket has been successfully deactivated."}
+  end
 end
 
 

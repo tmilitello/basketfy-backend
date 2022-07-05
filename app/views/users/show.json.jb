@@ -7,9 +7,7 @@
   email: @user.email,
   username: @user.username,
   age: @user.age,
-  # carted_products: @order.carted_products.map do |carted_product|
-  #   render "carted_products/carted_products", carted_product: carted_product
-  # end,
+  status: @user.status,
   created_at: @user.created_at,
   updated_at: @user.updated_at,
 }

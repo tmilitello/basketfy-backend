@@ -7,5 +7,24 @@
 ### Get baskets
 GET http://localhost:3000/baskets.json
 Content-Type: application/json
-Authorization: Bearer {{jwt}}
+
+
+### Show basket
+GET http://localhost:3000/baskets/1.json
+Content-Type: application/json
+
+
+#### Update Basket
+PATCH http://localhost:3000/baskets/1.json
+Content-type: application/json
+
+{
+  "name": "Militello Special",
+  "status": "Active"
+  
+}
+
+#### Deactivate Basket
+DELETE http://localhost:3000/baskets/1.json
+Content-Type: application/json
 

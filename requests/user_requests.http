@@ -1,16 +1,16 @@
 
 
- @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTcxMjU4MTl9.iGbP-ugGjbvNrG9m31P9tUnQ0BiLEXggiJu55EWYuhE
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NTcxMzE0MDR9._HAJk8uu3QoIyu-fZRSRoWAqMHPWI9UkkBirrtt355Q
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Thomas MTest",
-  "email": "test3@test.com",
-  "username": "test112334",
-  "age": 15,
+  "name": "Charlie Harned",
+  "email": "charlie@test.com",
+  "username": "charlie harned",
+  "age": 29,
   "password": "password",
   "password_confirmation": "password"
 }
@@ -21,13 +21,32 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test3@test.com",
+  "email": "charlie@test.com",
   "password": "password"
 }
 
 #### Get User Info
 
 GET http://localhost:3000/users.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Update User
+PATCH http://localhost:3000/users.json
+Content-type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "first_name": "Charlie",
+  "last_name": "Harned",
+  "username": "test543",
+  "status": "active"
+  
+}
+
+#### Deactivate User
+
+DELETE http://localhost:3000/users.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 

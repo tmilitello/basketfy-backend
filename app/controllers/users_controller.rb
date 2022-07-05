@@ -28,11 +28,30 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = current_user
+
+    @user.first_name = params["first_name"] || @user.first_name
+    @user.last_name = params["last_name"] || @user.last_name
+    @user.email = params["email"] || @user.email
+    @user.username = params["username"] || @user.username
+    @user.age = params["age"] || @user.age
+    @user.status = params["status"] || @user.status
+
+    if @user.save
+      @user.save
+      render json: {message: "Updated User!"}, updated_user: @user
+    else 
+      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
+    end
+
+  end
+
   def destroy
     @user = current_user
-    @.status = "removed"
-    carted_product.save
-    render json: {message: "Carted Product has been successfully removed."}
+    @user.status = "deactivated"
+    @user.save
+    render json: {message: "User has been successfully deactivated."}
   end
 
 
