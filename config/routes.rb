@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get "/assets" => "assets#index"
   get "/assets/:id" => "assets#show"
 
+  
+
 
   
 end

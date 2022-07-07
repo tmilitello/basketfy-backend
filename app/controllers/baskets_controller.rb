@@ -1,5 +1,28 @@
 class BasketsController < ApplicationController
 
+  def create
+    @basket = Basket.new(
+      name: params[:name],
+      user_id: params[:user_id],
+      status: params[:status]
+      asset_baskets: params[:asset_baskets]
+    )
+    if @basket.save
+      asset_baskets.each do |asset|
+        @new_basket = AssetBasket.create!(
+            basket_id: asset.basket_id,
+            asset_id: asset.asset_id,
+            weight: asset.weight,
+            status: asset.status
+           )
+      end
+
+      render json: { message: "Basket created!" }, status: :created
+    else
+      render json: { errors: @basket.errors.full_messages }, status: :bad_request
+    end
+  end
+
   def index
     @baskets = Basket.all
 
@@ -29,6 +52,7 @@ class BasketsController < ApplicationController
     @basket = Basket.find_by(id: params[:id])
 
     @basket.name = params["name"] || @basket.name
+    @basket.user_id = params['user_id'] || @basket.user_id
     @basket.status = params["status"] || @basket.status
 
   

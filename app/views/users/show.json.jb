@@ -9,9 +9,21 @@
   age: @user.age,
   status: @user.status,
   created_at: @user.created_at,
-  updated_at: @user.updated_at,
+  baskets: @user.baskets.map do |basket|
+    render "baskets/baskets", basket: basket
+  end
+
 }
 
+
+# asset_baskets: @user.asset_baskets.map do |asset_basket|
+#   {
+#    id: asset_basket.basket_id,
+#    asset_id: asset_basket.asset_id,
+#    weight: asset_basket.weight,
+#    status: asset_basket.status
+#  }
+# end,
 
 # create_table "users", force: :cascade do |t|
 #   t.string "first_name"

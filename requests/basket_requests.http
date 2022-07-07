@@ -14,12 +14,39 @@ GET http://localhost:3000/baskets/1.json
 Content-Type: application/json
 
 
+### Create Basket
+POST http://localhost:3000/baskets.json
+Content-Type: application/json
+
+{
+  "name": "Test 2 Basket",
+  "user_id": 1,
+  "status": "active",
+  "asset_baskets": [{
+    "basket_id": 1,
+    "asset_id": 1,
+    "weight": 0.5,
+    "status": "active"
+    },
+    {
+    "basket_id": 1,
+    "asset_id": 3,
+    "weight": 0.5,
+    "status": "active"
+    }
+    ]
+}
+
+### goal above is to pass in two assets
+
+
 #### Update Basket
 PATCH http://localhost:3000/baskets/1.json
 Content-type: application/json
 
 {
   "name": "Militello Special",
+  "user_id": 2,
   "status": "Active"
   
 }
