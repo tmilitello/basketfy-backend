@@ -1,6 +1,7 @@
 
 
 {
+  id: basket.id,
   user_id: basket.user_id,
   name: basket.name,
   created_at: basket.created_at,

@@ -23,16 +23,12 @@ Content-Type: application/json
   "user_id": 1,
   "status": "active",
   "asset_baskets": [{
-    "basket_id": 1,
     "asset_id": 1,
-    "weight": 0.5,
-    "status": "active"
+    "weight": 0.5
     },
     {
-    "basket_id": 1,
     "asset_id": 3,
-    "weight": 0.5,
-    "status": "active"
+    "weight": 0.5
     }
     ]
 }

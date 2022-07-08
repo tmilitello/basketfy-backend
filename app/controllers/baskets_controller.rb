@@ -4,20 +4,19 @@ class BasketsController < ApplicationController
     @basket = Basket.new(
       name: params[:name],
       user_id: params[:user_id],
-      status: params[:status]
-      asset_baskets: params[:asset_baskets]
+      status: "active"
     )
     if @basket.save
-      asset_baskets.each do |asset|
-        @new_basket = AssetBasket.create!(
-            basket_id: asset.basket_id,
-            asset_id: asset.asset_id,
-            weight: asset.weight,
-            status: asset.status
+      params[:asset_baskets].each do |asset|
+        AssetBasket.create!(
+            basket_id: @basket.id,
+            asset_id: asset[:asset_id],
+            weight: asset[:weight],
+            status: "active"
            )
       end
 
-      render json: { message: "Basket created!" }, status: :created
+      render template: "baskets/show", status: :created
     else
       render json: { errors: @basket.errors.full_messages }, status: :bad_request
     end
