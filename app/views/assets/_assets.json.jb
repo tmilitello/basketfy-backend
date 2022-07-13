@@ -1,11 +1,17 @@
 
 {
+  id: asset.id,
   name: asset.name,
   price: asset.price,
   created_at: asset.created_at,
-  updated_at: asset.updated_at
+  updated_at: asset.updated_at,
+  tags: asset.tags.map do |tag|
+    {
+     id: tag.id,
+     name: tag.name
+   }
+ end,
 
 }
-
 
 

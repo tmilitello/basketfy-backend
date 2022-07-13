@@ -15,5 +15,11 @@
       status: asset_basket.status
     }
   end,
+  tags: basket.tags.map do |tag|
+    {
+     id: tag.id,
+     name: tag.name
+   }
+ end,
 }
 

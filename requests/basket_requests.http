@@ -22,7 +22,7 @@ Content-Type: application/json
   "name": "Test 2 Basket",
   "user_id": 1,
   "status": "active",
-  "asset_baskets": [{
+  "assets": [{
     "asset_id": 1,
     "weight": 0.5
     },
@@ -43,7 +43,16 @@ Content-type: application/json
 {
   "name": "Militello Special",
   "user_id": 2,
-  "status": "Active"
+  "status": "active",
+   "assets": [{
+    "asset_id": 1,
+    "weight": 0.5
+    },
+    {
+    "asset_id": 3,
+    "weight": 0.5
+    }
+    ]
   
 }
 

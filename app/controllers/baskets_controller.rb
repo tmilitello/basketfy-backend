@@ -3,15 +3,15 @@ class BasketsController < ApplicationController
   def create
     @basket = Basket.new(
       name: params[:name],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       status: "active"
     )
-    if @basket.save
-      params[:asset_baskets].each do |asset|
+    if @basket.save!
+      params[:assets].each do |asset|
         AssetBasket.create!(
             basket_id: @basket.id,
             asset_id: asset[:asset_id],
-            weight: asset[:weight],
+            weight: asset[:weight].to_f * 0.01,
             status: "active"
            )
       end
@@ -53,21 +53,26 @@ class BasketsController < ApplicationController
     @basket.name = params["name"] || @basket.name
     @basket.user_id = params['user_id'] || @basket.user_id
     @basket.status = params["status"] || @basket.status
-
   
 
-    if @basket.save
-      @basket.save
-      render json: {message: "Updated basket!"}, updated_basket: @basket
+    if @basket.save!
+      params[:assets].each do |asset|
+        AssetBasket.create!(
+            basket_id: @basket.id,
+            asset_id: asset[:asset_id],
+            weight: asset[:weight].to_f * 0.01,
+            status: "active"
+           )
+      end
+      render template: "baskets/show"
     else 
       render json: {errors: @basket.errors.full_messages}, status: :unprocessable_entity
     end
-
   end
 
   def destroy
     @basket = Basket.find_by(id: params[:id])
-    @basket.status = "deactivated"
+    @basket.status = "inactive"
     @basket.save
     render json: {message: "Basket has been successfully deactivated."}
   end
