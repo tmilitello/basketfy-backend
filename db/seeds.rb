@@ -11,10 +11,10 @@ Tag.create!(name: 'conservative')
 user1= User.create!(first_name: 'Thomas', last_name: 'Militello', email: 'test1@gmail.com', password: "passord", username: 'Thomas_Militello', age: 29, status: "active")
 user2 = User.create!(first_name: 'Joey ', last_name: 'Harbert', email: 'test2@gmail.com', password: "password" , username: 'Joey_Harbert', age: 29, status: "active")
 
-Basket.create!(user_id: user1.id, name: 'Thomas\'s First Basket')
-Basket.create!(user_id: user1.id, name: 'Conservative Test Basket')
-Basket.create!(user_id: user1.id, name: 'Liberal Test Basket')
-Basket.create!(user_id: user2.id, name: 'Joey\'s Healthcare Basket')
+Basket.create!(user_id: user1.id, name: 'Thomas\'s First Basket', status: "active", price: "100")
+Basket.create!(user_id: user1.id, name: 'Conservative Test Basket', status: "active", price: "100")
+Basket.create!(user_id: user1.id, name: 'Liberal Test Basket', status: "active", price: "100")
+Basket.create!(user_id: user2.id, name: 'Joey\'s Healthcare Basket', status: "active", price: "100")
 
 
 Asset.create!(name: 'AAPL', price: 131.55)

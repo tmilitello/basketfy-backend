@@ -44,7 +44,7 @@ Content-type: application/json
   "name": "Militello Special",
   "user_id": 2,
   "status": "active",
-   "assets": [{
+   "asset_baskets": [{
     "asset_id": 1,
     "weight": 0.5
     },
@@ -60,3 +60,23 @@ Content-type: application/json
 DELETE http://localhost:3000/baskets/1.json
 Content-Type: application/json
 
+
+#### Update Asset_Basket
+PATCH http://localhost:3000/baskets/1.json
+Content-type: application/json
+
+{
+  "name": "Militello Special",
+  "user_id": 2,
+  "status": "active",
+   "asset_baskets": [{
+    "asset_id": 1,
+    "weight": 0.5
+    },
+    {
+    "asset_id": 3,
+    "weight": 0.5
+    }
+    ]
+  
+}

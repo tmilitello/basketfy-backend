@@ -4,7 +4,8 @@ class BasketsController < ApplicationController
     @basket = Basket.new(
       name: params[:name],
       user_id: current_user.id,
-      status: "active"
+      status: "active",
+      price: "100"
     )
     if @basket.save!
       params[:assets].each do |asset|
@@ -53,6 +54,7 @@ class BasketsController < ApplicationController
     @basket.name = params["name"] || @basket.name
     @basket.user_id = params['user_id'] || @basket.user_id
     @basket.status = params["status"] || @basket.status
+    @basket.price = params["price"] || @basket.price
   
 
     if @basket.save!
