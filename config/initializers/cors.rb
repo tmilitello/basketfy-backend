@@ -1,7 +1,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://basketfy-2022.herokuapp.com", "basketfy.io", "localhost:3000", "localhost:8080", "basketfy.io", "https://ancient-thicket-68427.herokuapp.com/baskets"
+    origins "basketfy.io", "localhost:3000", "localhost:8080", "basketfy.io", "ancient-thicket-68427.herokuapp.com"
 
     resource "*",
       headers: :any,
