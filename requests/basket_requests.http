@@ -2,7 +2,7 @@
 
 
 
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTcxMjU4MTl9.iGbP-ugGjbvNrG9m31P9tUnQ0BiLEXggiJu55EWYuhE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTkxOTc0NDV9.IlG7Oi5kJwA3DywjNAkDjXgkmfF9_dmU8ae-jyjaZCA
 
 ### Get baskets
 GET http://localhost:3000/baskets.json
