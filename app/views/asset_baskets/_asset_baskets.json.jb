@@ -2,7 +2,7 @@
 {
   basket_id: asset_baskets.basket_id,
   asset_id: asset_baskets.asset_id,
-  weight: asset_baskets.weight,
+  initial_weight: asset_baskets.initial_weight,
   status: asset_baskets.status,
   created_at: asset_baskets.created_at,
   updated_at: asset_baskets.updated_at,
