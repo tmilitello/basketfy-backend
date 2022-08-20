@@ -12,7 +12,7 @@ class BasketsController < ApplicationController
         AssetBasket.create!(
             basket_id: @basket.id,
             asset_id: asset[:asset_id],
-            weight: asset[:intial_weight].to_f * 0.01,
+            initial_weight: asset[:intial_weight].to_f * 0.01,
             status: "active"
            )
       end
@@ -62,7 +62,7 @@ class BasketsController < ApplicationController
         AssetBasket.create!(
             basket_id: @basket.id,
             asset_id: asset[:asset_id],
-            weight: asset[:weight].to_f * 0.01,
+            initial_weight: asset[:initial_weight].to_f * 0.01,
             status: "active"
            )
       end
