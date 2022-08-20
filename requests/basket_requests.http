@@ -24,11 +24,11 @@ Content-Type: application/json
   "status": "active",
   "assets": [{
     "asset_id": 1,
-    "weight": 0.5
+    "initial_weight": 0.5
     },
     {
     "asset_id": 3,
-    "weight": 0.5
+    "initial_weight": 0.5
     }
     ]
 }

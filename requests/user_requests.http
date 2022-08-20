@@ -1,6 +1,6 @@
 
 
- @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTkxOTc0NDV9.IlG7Oi5kJwA3DywjNAkDjXgkmfF9_dmU8ae-jyjaZCA
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjEwNzk4MTJ9.WD4vgjxJ5QNovYy8SDqDLAYal8NqVFvm7_A_-uhLlg4
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
