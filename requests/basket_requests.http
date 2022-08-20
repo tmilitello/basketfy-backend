@@ -2,7 +2,7 @@
 
 
 
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTkxOTc0NDV9.IlG7Oi5kJwA3DywjNAkDjXgkmfF9_dmU8ae-jyjaZCA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjExMjE2NDZ9.xbYLRGpWYIfL1PF1bMGS3VEnYsEsZ_EYQackBsCA7n0
 
 ### Get baskets
 GET http://localhost:3000/baskets.json
@@ -19,19 +19,18 @@ POST http://localhost:3000/baskets.json
 Content-Type: application/json
 
 {
-  "name": "Test 2 Basket",
+  "name": "Play Basket",
   "user_id": 1,
   "status": "active",
   "assets": [{
-    "asset_id": 1,
-    "initial_weight": 0.5
-    },
-    {
-    "asset_id": 3,
+    "asset_id": 10,
     "initial_weight": 0.5
     }
+
     ]
 }
+
+
 
 ### goal above is to pass in two assets
 

@@ -13,7 +13,7 @@
      {
       id: asset_basket.basket_id,
       asset_id: asset_basket.asset_id,
-      intial_weight: asset_basket.initial_weight,
+      initial_weight: asset_basket.initial_weight,
       status: asset_basket.status,
       asset: asset_basket.asset
 
